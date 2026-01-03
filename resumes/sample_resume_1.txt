@@ -1,0 +1,37 @@
+Name: John Michael Smith
+Email: john.smith@email.com
+Phone: +1-555-123-4567
+
+PROFESSIONAL SUMMARY
+Experienced Software Engineer with 5+ years of experience in Python, JavaScript, and React. 
+Proven track record in developing scalable web applications and leading cross-functional teams.
+
+EDUCATION
+Bachelor of Technology in Computer Science
+University of California, Berkeley
+2015 - 2019
+
+TECHNICAL SKILLS
+• Programming Languages: Python, JavaScript, Java, SQL
+• Frameworks & Libraries: React, Node.js, Django, Flask
+• Tools & Technologies: Git, Docker, AWS, Kubernetes
+• Soft Skills: Leadership, Team Management, Problem Solving
+
+WORK EXPERIENCE
+Senior Software Engineer | Tech Corp Inc | 2021 - Present
+• Led development of microservices architecture using Python and Docker
+• Managed team of 5 developers on critical projects
+• Implemented CI/CD pipelines reducing deployment time by 40%
+
+Software Engineer | StartupXYZ | 2019 - 2021
+• Developed full-stack web applications using React and Node.js
+• Collaborated with product team to deliver features on time
+• Improved application performance by 30%
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect
+• Google Analytics Certification
+
+ACHIEVEMENTS
+• Winner of Tech Innovation Award 2022
+• Published 3 technical articles on Medium
