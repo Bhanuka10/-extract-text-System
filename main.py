@@ -220,6 +220,72 @@ def extract_details(text):
     
     return details
 
+def create_detailed_field_data(details, filename):
+    """
+    Create detailed rows with field identification for each piece of information.
+    """
+    detailed_data = []
+    name = details.get("Name", "Unknown")
+    
+    # Add row for each field
+    detailed_data.append({
+        "Candidate_Name": name,
+        "Field": "Name",
+        "Value": details.get("Name", "Not Found"),
+        "Filename": filename
+    })
+    
+    detailed_data.append({
+        "Candidate_Name": name,
+        "Field": "Email",
+        "Value": details.get("Email", "Not Found"),
+        "Filename": filename
+    })
+    
+    detailed_data.append({
+        "Candidate_Name": name,
+        "Field": "Phone",
+        "Value": details.get("Phone", "Not Found"),
+        "Filename": filename
+    })
+    
+    detailed_data.append({
+        "Candidate_Name": name,
+        "Field": "Skills",
+        "Value": details.get("Skills", "Not Found"),
+        "Filename": filename
+    })
+    
+    detailed_data.append({
+        "Candidate_Name": name,
+        "Field": "Skills_Count",
+        "Value": str(details.get("Skills_Count", 0)),
+        "Filename": filename
+    })
+    
+    detailed_data.append({
+        "Candidate_Name": name,
+        "Field": "Education",
+        "Value": details.get("Education", "Not Found"),
+        "Filename": filename
+    })
+    
+    detailed_data.append({
+        "Candidate_Name": name,
+        "Field": "Experience_Years",
+        "Value": str(details.get("Experience_Years", 0)),
+        "Filename": filename
+    })
+    
+    detailed_data.append({
+        "Candidate_Name": name,
+        "Field": "Relevance_Score",
+        "Value": str(details.get("Relevance_Score", 0)),
+        "Filename": filename
+    })
+    
+    return detailed_data
+
 def main():
     # FOLDER SETUP
     input_folder = "resumes" # Put all PDFs, DOCXs, TXTs here
@@ -229,6 +295,7 @@ def main():
     Path(input_folder).mkdir(exist_ok=True)
     
     data_list = []
+    detailed_data_list = []
     
     print("="*60)
     print("  AUTOMATED RESUME PARSING & CANDIDATE SCREENING SYSTEM")
@@ -265,35 +332,47 @@ def main():
             details = extract_details(cleaned_text)
             details["Filename"] = filename # Add filename for reference
             data_list.append(details)
+            
+            # Create detailed field data
+            field_data = create_detailed_field_data(details, filename)
+            detailed_data_list.extend(field_data)
+            
             print(f"✓ Processed: {filename} (Score: {details['Relevance_Score']}%)")
         else:
             print(f"✗ Failed to extract text from: {filename}")
             
     # C. SAVE TO EXCEL
     if data_list:
-        df = pd.DataFrame(data_list)
+        # Create summary dataframe
+        df_summary = pd.DataFrame(data_list)
         
         # Sort by relevance score (highest first)
-        df = df.sort_values('Relevance_Score', ascending=False)
+        df_summary = df_summary.sort_values('Relevance_Score', ascending=False)
         
         # Reorder columns to look professional
-        df = df[["Name", "Email", "Phone", "Skills_Count", "Skills", "Education", 
+        df_summary = df_summary[["Name", "Email", "Phone", "Skills_Count", "Skills", "Education", 
                  "Experience_Years", "Relevance_Score", "Filename"]]
         
-        # Save to Excel with formatting
-        df.to_excel(output_file, index=False, sheet_name="Candidates")
+        # Create detailed dataframe with Field column
+        df_detailed = pd.DataFrame(detailed_data_list)
+        
+        # Save to Excel with multiple sheets
+        with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
+            df_summary.to_excel(writer, sheet_name="Summary", index=False)
+            df_detailed.to_excel(writer, sheet_name="Detailed_Fields", index=False)
         
         print("\n" + "="*60)
         print(f"✓ SUCCESS! Processed {len(data_list)} resume(s)")
         print(f"✓ Data saved to: {output_file}")
+        print(f"✓ Created 2 sheets: Summary & Detailed_Fields")
         print("="*60)
         
         # Print summary statistics
         print("\n📊 SUMMARY STATISTICS:")
-        print(f"   • Average Relevance Score: {df['Relevance_Score'].mean():.1f}%")
-        print(f"   • Top Candidate: {df.iloc[0]['Name']} ({df.iloc[0]['Relevance_Score']}%)")
-        print(f"   • Total Skills Found: {df['Skills_Count'].sum()}")
-        print(f"   • Avg Experience: {df['Experience_Years'].mean():.1f} years")
+        print(f"   • Average Relevance Score: {df_summary['Relevance_Score'].mean():.1f}%")
+        print(f"   • Top Candidate: {df_summary.iloc[0]['Name']} ({df_summary.iloc[0]['Relevance_Score']}%)")
+        print(f"   • Total Skills Found: {df_summary['Skills_Count'].sum()}")
+        print(f"   • Avg Experience: {df_summary['Experience_Years'].mean():.1f} years")
     else:
         print("\n⚠️  No resumes were successfully processed.")
 
