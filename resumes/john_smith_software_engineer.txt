@@ -1,0 +1,56 @@
+JOHN SMITH
+Software Engineer
+Email: john.smith@email.com | Phone: +1-555-0101 | LinkedIn: linkedin.com/in/johnsmith
+Location: San Francisco, CA
+
+PROFESSIONAL SUMMARY
+Results-driven Software Engineer with 5+ years of experience in full-stack development. Proficient in Python, JavaScript, and cloud technologies. Strong problem-solving skills and proven track record of delivering scalable solutions.
+
+WORK EXPERIENCE
+
+Senior Software Engineer
+Tech Solutions Inc., San Francisco, CA
+June 2021 - Present
+- Developed and maintained microservices architecture using Python, Django, and Docker
+- Implemented RESTful APIs serving 1M+ daily requests with 99.9% uptime
+- Led team of 4 developers in agile development environment
+- Optimized database queries reducing response time by 40%
+- Technologies: Python, Django, PostgreSQL, Docker, Kubernetes, AWS, Git
+
+Software Developer
+StartUp Innovations, San Jose, CA
+January 2019 - May 2021
+- Built responsive web applications using React and Node.js
+- Integrated third-party APIs and payment gateways
+- Collaborated with UX/UI team to improve user experience
+- Implemented CI/CD pipelines using Jenkins and GitHub Actions
+- Technologies: JavaScript, React, Node.js, MongoDB, Express, Git
+
+Junior Developer
+Code Factory, Mountain View, CA
+July 2018 - December 2018
+- Developed features for e-commerce platform
+- Fixed bugs and performed code reviews
+- Technologies: Java, Spring Boot, MySQL
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+University of California, Berkeley
+Graduated: May 2018
+GPA: 3.7/4.0
+
+TECHNICAL SKILLS
+Programming Languages: Python, JavaScript, Java, C++, SQL
+Frameworks & Libraries: Django, Flask, React, Angular, Node.js, Express, Spring Boot
+Databases: PostgreSQL, MongoDB, MySQL, Redis
+Cloud & DevOps: AWS (EC2, S3, Lambda), Azure, Docker, Kubernetes, Jenkins, Git
+Tools: Linux, JIRA, Postman, VS Code
+
+CERTIFICATIONS
+- AWS Certified Developer - Associate (2022)
+- Python Professional Certification (2020)
+
+PROJECTS
+E-commerce Platform: Built a full-stack e-commerce application using React, Node.js, and MongoDB
+Machine Learning Model: Developed a recommendation system using Python and TensorFlow

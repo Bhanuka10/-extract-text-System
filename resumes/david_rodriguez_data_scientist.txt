@@ -1,0 +1,74 @@
+DAVID RODRIGUEZ
+Data Scientist
+Email: david.rodriguez@email.com | Phone: +1-555-0505 | LinkedIn: linkedin.com/in/davidrodriguez
+Location: Seattle, WA
+
+PROFESSIONAL SUMMARY
+Innovative Data Scientist with 4+ years of experience in machine learning, statistical analysis, and data visualization. Skilled in Python, R, and SQL with expertise in developing predictive models and deriving actionable insights from complex datasets.
+
+WORK EXPERIENCE
+
+Data Scientist
+Tech Analytics Inc., Seattle, WA
+July 2021 - Present
+- Develop and deploy machine learning models for customer churn prediction (85% accuracy)
+- Build recommendation systems using collaborative filtering and deep learning
+- Perform exploratory data analysis on large datasets (100M+ records)
+- Create interactive dashboards and visualizations using Tableau and Power BI
+- Collaborate with engineering team to productionize ML models
+- Technologies: Python, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, SQL, AWS
+
+Data Analyst
+DataDriven Solutions, San Francisco, CA
+September 2019 - June 2021
+- Analyzed customer behavior data to identify trends and opportunities
+- Built statistical models for sales forecasting (improving accuracy by 20%)
+- Created automated reporting pipelines using Python and SQL
+- Conducted A/B testing and hypothesis testing
+- Presented findings to stakeholders and leadership team
+- Technologies: Python, R, SQL, Excel, Tableau
+
+Junior Data Analyst
+StartUp Analytics, Palo Alto, CA
+June 2018 - August 2019
+- Cleaned and preprocessed data from various sources
+- Generated weekly and monthly reports for management
+- Assisted in data collection and database maintenance
+- Technologies: SQL, Python, Excel
+
+EDUCATION
+
+Master of Science in Data Science
+University of Washington, Seattle
+Graduated: May 2020
+GPA: 3.9/4.0
+Thesis: "Deep Learning Approaches for Time Series Forecasting"
+
+Bachelor of Science in Mathematics
+Stanford University, Palo Alto, CA
+Graduated: May 2018
+GPA: 3.7/4.0
+
+TECHNICAL SKILLS
+Programming Languages: Python, R, SQL, Java, Scala
+Machine Learning: Scikit-learn, TensorFlow, PyTorch, Keras, XGBoost, Random Forest
+Data Processing: Pandas, NumPy, PySpark, Apache Spark
+Visualization: Tableau, Power BI, Matplotlib, Seaborn, Plotly
+Databases: PostgreSQL, MySQL, MongoDB, Cassandra
+Cloud Platforms: AWS (SageMaker, EC2, S3), Azure, Google Cloud Platform
+Tools: Jupyter Notebook, Git, Docker, Airflow
+
+PROJECTS
+- Customer Segmentation: Developed unsupervised clustering algorithm to segment 1M+ customers
+- Fraud Detection System: Built ML model detecting fraudulent transactions with 92% precision
+- NLP Sentiment Analysis: Created sentiment analysis tool for social media monitoring
+- Time Series Forecasting: Implemented LSTM model for stock price prediction
+
+CERTIFICATIONS
+- AWS Certified Machine Learning - Specialty (2022)
+- TensorFlow Developer Certificate (2021)
+- Google Data Analytics Professional Certificate (2020)
+
+PUBLICATIONS
+- "Improving Churn Prediction using Deep Learning" - Journal of Data Science, 2022
+- Conference presentation at KDD 2021 on recommendation systems
